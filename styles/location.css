@@ -1,0 +1,43 @@
+/* Header */
+.location-header {
+  position: relative;
+}
+
+.button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.location-map {
+  background: url('/assets/mobile/image-map@2x.png') center / cover no-repeat;
+  height: 550px;
+}
+
+/* Main */
+.container.location {
+  padding: 3rem 1rem 3.5rem;
+  width: 100%;
+  background: var(--clr-secondary-900);
+  color: var(--clr-neutral-100);
+}
+
+.accent-color {
+  color: var(--clr-primary-500);
+}
+
+.address {
+  margin-bottom: 1.25rem;
+}
+
+/* Footer */
+
+footer.accent-color {
+  background: var(--clr-primary-500);
+}
+
+footer.accent-color p,
+footer.accent-color a {
+  color: var(--clr-secondary-900);
+}
