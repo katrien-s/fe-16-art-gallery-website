@@ -41,3 +41,39 @@ footer.accent-color p,
 footer.accent-color a {
   color: var(--clr-secondary-900);
 }
+
+/* Tablet Version */
+
+@media (min-width: 46em) {
+  .location-map {
+    background: url('/assets/tablet/image-map@2x.png') center / cover no-repeat;
+    height: 600px;
+  }
+
+  .container.location {
+    display: flex;
+    justify-content: space-between;
+    gap: 5.6rem;
+    padding: 5.5rem 2.5rem 5rem;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-text {
+    margin: unset;
+  }
+
+  .footer-content {
+    display: flex;
+    gap: 2rem;
+    width: 70%;
+  }
+  .nowrap {
+    white-space: nowrap;
+  }
+}
+
+/* Desktop Version */

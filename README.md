@@ -43,7 +43,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [Github](https://github.com/graficdoctor/fe-16-art-gallery-website)
-- Live Site URL: [Deployed On Vercel](https://your-live-site-url.com)
+- Live Site URL: [Deployed On Vercel](https://fe-16-art-gallery-website.vercel.app/)
 
 ## My process
 
@@ -112,4 +112,5 @@ Use this section to outline areas that you want to continue focusing on in futur
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
 **Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+
 # fe-16-art-gallery-website
