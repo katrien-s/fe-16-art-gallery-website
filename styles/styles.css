@@ -167,12 +167,14 @@ a {
 
 .light-textframe {
   padding: 0.5rem 0 1.5rem;
+  grid-area: light;
 }
 
 .dark-textframe {
   background: var(--clr-secondary-900);
   color: var(--clr-neutral-100);
   padding: 3rem 1.5rem;
+  grid-area: dark;
 }
 
 .image-grid-1 {
@@ -202,4 +204,107 @@ footer p {
 .flex {
   display: flex;
   gap: 20px;
+}
+
+/* Tablet Version */
+@media (min-width: 46em) {
+  .header {
+    position: relative;
+  }
+
+  .header-image {
+    background: url('/assets/tablet/image-hero@2x.jpg') center / cover no-repeat;
+    height: 700px;
+    max-width: 437px;
+  }
+
+  header .container {
+    width: 339px;
+    position: absolute;
+    top: 0;
+    left: 48%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr auto 280px;
+    grid-template-areas:
+      'light image-1 image-1'
+      'image-2 image-2 image-3'
+      'image-2 image-2 dark';
+    gap: 11px;
+  }
+
+  .image-grid-1 {
+    background: url(/assets/tablet/image-grid-1@2x.jpg) center / contain
+      no-repeat;
+    grid-area: image-1;
+    height: 400px;
+    width: 400px;
+  }
+
+  .image-grid-2 {
+    background: url(/assets/tablet/image-grid-2@2x.jpg) center / contain
+      no-repeat;
+    grid-area: image-2;
+    height: 720px;
+  }
+
+  .image-grid-3 {
+    background: url(/assets/tablet/image-grid-3@2x.jpg) center / contain
+      no-repeat;
+    grid-area: image-3;
+    height: 313px;
+  }
+
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-text {
+    margin: unset;
+  }
+
+  .footer-content {
+    display: flex;
+    gap: 2rem;
+    width: 70%;
+  }
+  .nowrap {
+    white-space: nowrap;
+  }
+}
+
+/* Desktop Version */
+@media (min-width: 70em) {
+  .container {
+    max-width: 1110px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr auto 445px;
+    gap: 30px;
+  }
+
+  .image-grid-1 {
+    background: url(/assets/desktop/image-grid-1@2x.jpg) center / contain
+      no-repeat;
+    grid-area: image-1;
+    height: 400px;
+    width: 635px;
+  }
+
+  .image-grid-2 {
+    background: url(/assets/desktop/image-grid-2@2x.jpg) center / contain
+      no-repeat;
+    grid-area: image-2;
+    height: 720px;
+  }
+
+  .image-grid-3 {
+    background: url(/assets/desktop/image-grid-3@2x.jpg) center / contain
+      no-repeat;
+    grid-area: image-3;
+    height: 313px;
+  }
 }

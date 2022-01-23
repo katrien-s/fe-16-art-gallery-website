@@ -16,8 +16,8 @@
 }
 
 /* Main */
-.container.location {
-  padding: 3rem 1rem 3.5rem;
+.location {
+  padding: 5.5rem 2.5rem 5.5rem;
   width: 100%;
   background: var(--clr-secondary-900);
   color: var(--clr-neutral-100);
@@ -45,35 +45,37 @@ footer.accent-color a {
 /* Tablet Version */
 
 @media (min-width: 46em) {
+  .button {
+    left: 2.5rem;
+  }
+
   .location-map {
     background: url('/assets/tablet/image-map@2x.png') center / cover no-repeat;
     height: 600px;
   }
 
-  .container.location {
+  .location .container {
     display: flex;
     justify-content: space-between;
     gap: 5.6rem;
-    padding: 5.5rem 2.5rem 5rem;
-  }
-
-  footer {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .footer-text {
-    margin: unset;
-  }
-
-  .footer-content {
-    display: flex;
-    gap: 2rem;
-    width: 70%;
-  }
-  .nowrap {
-    white-space: nowrap;
   }
 }
 
 /* Desktop Version */
+@media (min-width: 70em) {
+  .location-header {
+    max-width: 1140px;
+  }
+
+  .button {
+    left: 0em;
+  }
+
+  .location {
+    outline: 1px solid pink;
+  }
+
+  .container {
+    outline: 1px solid yellow;
+  }
+}
