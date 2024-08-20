@@ -13,11 +13,19 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<div class="container">
-			<h1 class="ff-serif">Design System</h1>
+		<header class="bg-900">
+			<div
+				class="wrapper flex text-100 items-center justify-between"
+				style="padding-block: 3rem"
+			>
+				<img src="assets/logo-light.svg" alt="" />
+				<h1 class="ff-sans-normal fs-400 fw-300">Design System</h1>
+			</div>
+		</header>
+		<div class="wrapper">
 			<section id="colors">
 				<h2 class="title">colors</h2>
-				<div class="flex">
+				<div class="grid grid-cols-4">
 					<div>
 						<div
 							class="bg-accent text-100 ff-sans-cond fs-300"
@@ -25,11 +33,13 @@
 						>
 							#D5966C
 						</div>
-						<p class="fw-500">
-							<span class="fw-300 text-900">RGB</span> 213, 150, 108
+						<p class="fs-300 fw-500">
+							<span class="fw-300 text-900 text-opacity-50">RGB</span> 213, 150,
+							108
 						</p>
-						<p class="fw-500">
-							<span class="fw-300 text-900">HSL</span> 24°, 49%, 84%
+						<p class="fs-300 fw-500">
+							<span class="fw-300 text-900 text-opacity-50">HSL</span> 24°, 49%,
+							84%
 						</p>
 					</div>
 					<div>
@@ -39,11 +49,13 @@
 						>
 							#151515
 						</div>
-						<p class="fw-500">
-							<span class="fw-300 text-900">RGB</span> 21, 21, 21
+						<p class="fs-300 fw-500">
+							<span class="fw-300 text-900 text-opacity-50">RGB</span> 21, 21,
+							21
 						</p>
-						<p class="fw-500">
-							<span class="fw-300 text-900">HSL</span> 0°, 0%, 8%
+						<p class="fs-300 fw-500">
+							<span class="fw-300 text-900 text-opacity-50">HSL</span> 0°, 0%,
+							8%
 						</p>
 					</div>
 					<div>
@@ -53,25 +65,29 @@
 						>
 							#444444
 						</div>
-						<p class="fw-500">
-							<span class="fw-300 text-900">RGB</span> 68, 68, 68
+						<p class="fs-300 fw-500">
+							<span class="fw-300 text-900 text-opacity-50">RGB</span> 68, 68,
+							68
 						</p>
-						<p class="fw-500">
-							<span class="fw-300 text-900">HSL</span> 0°, 0%, 27%
+						<p class="fs-300 fw-500">
+							<span class="fw-300 text-900 text-opacity-50">HSL</span> 0°, 0%,
+							27%
 						</p>
 					</div>
 					<div>
 						<div
-							class="bg-100 text-900 ff-sans-cond fs-300"
-							style="padding: 3rem 1rem 0.75rem; border: 1px solid var(bg-500)"
+							class="bg-100 text-900 ff-sans-cond fs-300 border"
+							style="padding: 3rem 1rem 0.75rem"
 						>
 							#FFFFFF
 						</div>
-						<p class="fw-500">
-							<span class="fw-300 text-900">RGB</span> 255, 255, 255
+						<p class="fs-300 fw-500">
+							<span class="fw-300 text-900 text-opacity-50">RGB</span> 255, 255,
+							255
 						</p>
-						<p class="fw-500">
-							<span class="fw-300 text-900">HSL</span> 0°, 0%, 100%
+						<p class="fs-300 fw-500">
+							<span class="fw-300 text-900 text-opacity-50">HSL</span> 0°, 0%,
+							100%
 						</p>
 					</div>
 				</div>
@@ -79,25 +95,47 @@
 			<section id="typography" style="margin: 4rem 0">
 				<h2 class="title">Typography</h2>
 				<div class="flex">
-					<div class="flow" style="flex-basis: 100%">
-						<div>
-							<p class="text-accent">Heading 1 - Bellefair Regular - 150px</p>
-							<p class="fs-900 uppercase ff-sans-cond">Morbi in sem placerat</p>
+					<div class="flow" style="flex-basis: 100%; --flow-space: 4rem">
+						<div class="text-900">
+							<p class="fs-300">
+								<span class="fw-500">Heading (XL)</span>
+								<span class="text-opacity-50">
+									Big Shoulders Display Black 96px 88px Line Spacing
+								</span>
+							</p>
+							<p class="fs-900 uppercase ff-sans-cond line-height-1">
+								Morbi in sem placerat
+							</p>
 						</div>
-						<div>
-							<p class="text-accent">Heading 2 - Bellefair Regular - 100px</p>
+						<div class="text-900">
+							<p class="fs-300">
+								<span class="fw-500">Heading (L)</span>
+								<span class="text-opacity-50">
+									Big Shoulders Display Black 70px 70px Line Spacing
+								</span>
+							</p>
 							<p class="fs-800 uppercase ff-sans-cond">
 								Praesent dapibus neque id cursus
 							</p>
 						</div>
-						<div>
-							<p class="text-accent">Heading 3 - Bellefair Regular - 56px</p>
+						<div class="text-900">
+							<p class="fs-300">
+								<span class="fw-500">Heading (M)</span>
+								<span class="text-opacity-50">
+									Big Shoulders Display Black 60px 60px Line Spacing
+								</span>
+							</p>
 							<p class="fs-700 uppercase ff-sans-cond">
 								Phasellus ultrices nulla quis nibh
 							</p>
 						</div>
-						<div>
-							<p class="text-accent">Heading 4 - Bellefair Regular - 32px</p>
+						<div class="text-900">
+							<p class="fs-300">
+								<span class="fw-500">Heading (S)</span>
+								<span class="text-opacity-50">
+									Big Shoulders Display Black 36px 36px Line Spacing
+								</span>
+							</p>
 							<p class="fs-600 uppercase ff-sans-cond">
 								Nam nulla quam gravida non commodo a sodales sit
 							</p>
@@ -106,8 +144,13 @@
 
 					<div class="flow" style="flex-basis: 100%; --flow-space: 4rem">
 						<div>
-							<p class="text-accent">Body Text</p>
-							<p>
+							<p class="text-900 fs-300">
+								<span class="fw-500">Body (M)</span>
+								<span class="text-opacity-50">
+									Outfit Light 22px 32px Line Spacing
+								</span>
+							</p>
+							<p class="fs-500 fw-300 line-height-2">
 								Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 								Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi
 								neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium,
@@ -116,7 +159,7 @@
 								Suspendisse potenti.
 							</p>
 
-							<p>
+							<p class="fs-500 fw-300 line-height-2">
 								Sed egestas, ante et vulputate volutpat, eros pede semper est,
 								vitae luctus metus libero eu augue. Morbi purus libero, faucibus
 								adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent
@@ -125,8 +168,13 @@
 							</p>
 						</div>
 						<div>
-							<p class="text-accent">Body Text</p>
-							<p>
+							<p class="text-900 fs-300">
+								<span class="fw-500">Body (S)</span>
+								<span class="text-opacity-50">
+									Outfit Light 18px 28px Line Spacing
+								</span>
+							</p>
+							<p class="fw-300 line-height-3">
 								Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 								Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi
 								neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium,
@@ -141,84 +189,34 @@
 			<section class="flow" id="buttons">
 				<h2 class="title">Buttons</h2>
 
-				<!-- navigation -->
-				<div>
-					<nav>
-						<ul class="primary-navigation underline-indicators | flex">
-							<li class="active">
-								<a class="uppercase text-white letter-spacing-2" href="#"
-									><span>01</span>Active</a
-								>
-							</li>
-							<li>
-								<a class="uppercase text-white letter-spacing-2" href="#"
-									><span>02</span>Hovered</a
-								>
-							</li>
-							<li>
-								<a class="uppercase text-white letter-spacing-2" href="#"
-									><span>03</span>Idle</a
-								>
-							</li>
-						</ul>
-					</nav>
-				</div>
-
+				<!-- buttons -->
 				<div class="flex">
-					<div style="margin-top: 5rem">
-						<!-- explore button -->
-						<a
-							href="#"
-							class="large-button | ff-serif fs-600 uppercase text-dark bg-white"
-							>Explore</a
-						>
-					</div>
-
 					<div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem">
-						<!-- Tabs -->
-						<div class="tab-list underline-indicators | flex">
-							<button
-								aria-selected="true"
-								class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
-							>
-								Moon
-							</button>
-							<button
-								aria-selected="false"
-								class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
-							>
-								Mars
-							</button>
-							<button
-								aria-selected="false"
-								class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
-							>
-								Europa
-							</button>
+						<div class="button">
+							<a class="" aria-selected="false"> Our Location </a>
+							<span>
+								<img src="assets/icon-arrow-right.svg" alt="" />
+							</span>
 						</div>
-						<!-- Dots -->
-						<div class="dot-indicators | flex">
-							<button aria-selected="true">
-								<span class="sr-only">Slide Title</span>
-							</button>
-							<button aria-selected="false">
-								<span class="sr-only">Slide Title</span>
-							</button>
-							<button aria-selected="false">
-								<span class="sr-only">Slide Title</span>
-							</button>
+						<div class="button" active>
+							<a class="" aria-selected="true"> Our location </a>
+							<span>
+								<img src="assets/icon-arrow-right.svg" alt="" />
+							</span>
 						</div>
-						<!-- Numbers -->
-						<div class="number-indicators" style="--gap: 1rem">
-							<button aria-selected="true">
-								<span class="fs-600 ff-serif">1</span>
-							</button>
-							<button aria-selected="false">
-								<span class="fs-600 ff-serif">2</span>
-							</button>
-							<button aria-selected="false">
-								<span class="fs-600 ff-serif">3</span>
-							</button>
+					</div>
+					<div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem">
+						<div class="button">
+							<span>
+								<img src="assets/icon-arrow-left.svg" alt="" />
+							</span>
+							<a class="" aria-selected="false"> Back to Home </a>
+						</div>
+						<div class="button" active>
+							<span>
+								<img src="assets/icon-arrow-left.svg" alt="" />
+							</span>
+							<a class="" aria-selected="true"> Back to Home </a>
 						</div>
 					</div>
 				</div>
