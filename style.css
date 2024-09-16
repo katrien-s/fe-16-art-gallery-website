@@ -29,21 +29,21 @@
 	--transition: all 0.5s ease;
 }
 
-@media (min-width: 35em) {
+@media (width >= 43.75em) {
 	:root {
 		--fs-900: 4.375rem;
 		--fs-800: 4.375rem;
-		--fs-700: 3.75rem;
 		--fs-600: 2.25rem;
 		--fs-500: 1.375rem;
 		--fs-300: 1rem;
 	}
 }
 
-@media (min-width: 45em) {
+@media (width >= 62.5em) {
 	:root {
 		--fs-900: 6rem;
 		--fs-800: 4.375rem;
+		--fs-700: 3.75rem;
 		--fs-600: 2.25rem;
 		--fs-500: 1.375rem;
 		--fs-400: 1.375rem;
@@ -111,7 +111,7 @@ img,
 picture {
 	display: block;
 	max-width: 100%;
-	height: auto;
+	height: 100%;
 }
 
 input,
@@ -182,32 +182,58 @@ a {
 	--flow-space: 0.75rem;
 }
 
-/* .wrapper {
-	width: min(calc(100vw - 2rem), 69rem);
-	margin-inline: auto;
-} */
-
 .fb-col-wrapper {
+	--space-lr: 2rem;
+	--space-gap: 0;
+	--col-count: 0;
+
 	display: grid;
-	grid-template-columns: 1fr min(100vw - 2rem, 69rem) 1fr;
+	grid-template-columns: 1fr min(100vw - (var(--space-lr)), 69rem) 1fr;
 }
 
 /* .fb-col-wrapper > * {
 	grid-column: 2;
 } */
 
-@media (width >= 43.75em) {
-	/* .wrapper {
-		width: min(100vw - 4.5rem, 69rem);
-	} */
-
+@media (min-width: 43.75em) {
 	.fb-col-wrapper {
+		--space-lr: 4rem;
+		--space-gap: 11px;
+		--col-count: 12;
+
 		grid-template-columns:
-			1fr repeat(12, calc((min(100vw - 4.5rem, 69rem) - 11 * 30px) / 12))
+			1fr repeat(
+				var(--col-count),
+				calc(
+					(
+							min(100vw - var(--space-lr), 69rem) -
+								((var(--col-count) - 1) * var(--space-gap))
+						) / var(--col-count)
+				)
+			)
 			1fr;
-		gap: 30px;
 	}
 }
+
+/* @media (width >= 62.5em) {
+	.fb-col-wrapper {
+		--space-lr: 4rem;
+		--space-gap: 11px;
+		--col-count: 12;
+
+		grid-template-columns:
+			1fr repeat(
+				var(--col-count),
+				calc(
+					(
+							min(100vw - var(--space-lr), 69rem) -
+								((var(--col-count) - 1) * var(--space-gap))
+						) / var(--col-count)
+				)
+			)
+			1fr;
+	}
+} */
 
 .sr-only {
 	position: absolute;
@@ -344,31 +370,15 @@ a {
 .fs-800,
 .fs-700,
 .fs-600 {
-	line-height: 1;
-}
-
-.line-height-1 {
 	line-height: 0.9;
-}
-.line-height-2 {
-	line-height: 1.45;
-}
-.line-height-3 {
-	line-height: 1.55;
 }
 
 .fw-300 {
 	font-weight: 300;
 }
+
 .fw-500 {
 	font-weight: 500;
-}
-
-.title {
-	font-family: var(--ff-sans-cond);
-	font-size: var(--fs-600);
-	text-transform: uppercase;
-	opacity: 0.5;
 }
 
 /* ----------------  */
@@ -449,18 +459,92 @@ main {
 	grid-column: 2;
 }
 
-.main-text.bg-900 {
+.main-text__inspired {
 	padding: 3rem 1.5rem;
 }
 
 footer {
 	grid-column: 1/-1;
 	padding: 3rem 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2.375rem;
+}
+
+footer img {
+  width: auto;
+  height: 40px;
+  object-fit: contain;
+  margin-right: auto;
+}
+
+@media (width >= 43.75em) {
+	header {
+		grid-column: 1/14;
+		position: relative;
+	}
+
+	.header-text {
+		padding-inline: unset;
+		position: absolute;
+		z-index: 1;
+		left: 50%;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	main {
+		grid-column: 2/14;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-areas:
+			'day day day day day grid-1 grid-1 grid-1 grid-1 grid-1 grid-1 grid-1'
+			'grid-2 grid-2 grid-2 grid-2 grid-2 grid-2 grid-2 grid-3 grid-3 grid-3 grid-3 grid-3'
+			'grid-2 grid-2 grid-2 grid-2 grid-2 grid-2 grid-2 inspired inspired inspired inspired inspired';
+		gap: 11px;
+	}
+
+	.main-text__day {
+		grid-area: day;
+	}
+
+	.main-text__inspired {
+		grid-area: inspired;
+	}
+
+	.image-grid-1 {
+		grid-area: grid-1;
+	}
+
+	.image-grid-2 {
+		grid-area: grid-2;
+	}
+
+	.image-grid-3 {
+		grid-area: grid-3;
+	}
+
+	.mb-4 {
+		margin-bottom: unset;
+	}
+
+	footer {
+		display: flex;
+    flex-direction: row;
+		align-items: start;
+		justify-content: space-between;
+		gap: 64px;
+	}
+
+  .footer-text {
+    margin-right: 64px;
+  }
+
 }
 
 /* location.html */
 
-body#location {
+/* body#location {
 	position: relative;
 }
 
@@ -471,7 +555,7 @@ header#location {
 
 main#location {
 	grid-column: 1/-1;
-}
+} */
 
 /* footer .wrapper {
 	padding-block: 3rem;
@@ -482,7 +566,7 @@ footer .wrapper > *:where(:not(:first-child)) {
 	margin-top: 2.375rem;
 } */
 
-@media (min-width: 40em) {
+/* @media (min-width: 40em) {
 	header#location {
 		left: 2.5rem;
 	}
@@ -493,9 +577,9 @@ footer .wrapper > *:where(:not(:first-child)) {
 		justify-content: space-between;
 		gap: 6rem;
 		padding-block: 5.25rem;
-	}
+	} */
 
-	/* footer.location {
+/* footer.location {
 		display: grid;
 		grid-template-columns: repeat(3, auto);
 		gap: 4rem;
@@ -505,7 +589,7 @@ footer .wrapper > *:where(:not(:first-child)) {
 	footer > * {
 		margin-top: 0rem;
 	} */
-}
+/* } */
 
 /* footer ul li a {
 	display: flex;
