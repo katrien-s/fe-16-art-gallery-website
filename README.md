@@ -11,12 +11,8 @@ This is a solution to the [Art gallery website challenge on Frontend Mentor](htt
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -30,7 +26,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot-1.jpg)
+![](./screenshot-2.jpg)
 
 ### Links
 
@@ -71,11 +68,6 @@ Solution for the black/white colour of the title: adding a `clip-path` to the `<
 }
 ```
 
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-
 ### Useful resources
 
 - [What do you name color variables?](https://css-tricks.com/what-do-you-name-color-variables/) - I like using variables but up until now I wasn't always using the same naming-convention. I looked it up on CSS Tricks and came across a link to [Material Design](https://material.io/design/color/the-color-system.html#color-theme-creation) where the same naming-convention is being used like I was aiming for. Bookmarked the site thus.
@@ -85,7 +77,3 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - Website - [Katrien S](https://www.katriens.be)
 - Frontend Mentor - [@katrien-s](https://www.frontendmentor.io/profile/katrien-s)
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
