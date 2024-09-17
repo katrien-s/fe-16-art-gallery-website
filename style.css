@@ -450,11 +450,24 @@ a {
 /* index.html */
 
 header {
+	margin-bottom: 7.5rem;
+}
+
+.header-image {
 	grid-column: 1/-1;
 }
 
 .header-text {
-	padding-inline: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: space-between;
+	gap: 2rem;
+	margin-top: 32px;
+}
+
+.header-text div p {
+	margin-bottom: 32px;
 }
 
 main {
@@ -483,19 +496,27 @@ footer img {
 	width: auto;
 }
 
+.footer-navigation a {
+	display: flex;
+	justify-content: center;
+}
+
 @media (width >= 43.75em) {
-	header {
-		grid-column: 1/14;
-		position: relative;
+	.header-image {
+		grid-column: 1/9;
+		grid-row: 1;
 	}
 
 	.header-text {
-		padding-inline: unset;
-		position: absolute;
+		grid-column: 8/14;
 		z-index: 1;
-		left: 50%;
-		top: 50%;
-		transform: translateY(-50%);
+		grid-row: 1;
+		gap: 48px;
+		justify-content: center;
+	}
+
+	.header-text div p {
+		margin-bottom: 48px;
 	}
 
 	main {
@@ -526,6 +547,70 @@ footer img {
 	.main-text__inspired {
 		grid-column: 9/14;
 		grid-row: 3/-1;
+	}
+
+	footer img {
+		grid-column: 2/4;
+	}
+
+	footer .footer-text {
+		grid-column: 5/10;
+		margin-block: 0;
+	}
+
+	.footer-navigation {
+		grid-column: 12/14;
+	}
+
+	.footer-navigation ul {
+		align-items: end;
+		justify-content: end;
+	}
+}
+
+@media (width >= 62.5em) {
+	.fb-col-wrapper {
+		position: relative;
+	}
+
+	.header-image {
+		grid-column: 1/11;
+		background-color: black;
+	}
+
+	.header-image picture {
+		width: 540px;
+		margin-left: auto;
+	}
+
+	.header-text {
+		grid-column: 2/14;
+		align-self: center;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+	}
+
+	.header-text h1::before {
+		content: 'Modern Art Gallery';
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: hsl(var(--clr-100));
+		z-index: 1;
+		clip-path: polygon(0 0, 54% 0, 54% 100%, 0 100%);
+	}
+
+	.header-text h1 {
+		grid-column: 1/7;
+		position: relative;
+	}
+
+	.header-text div {
+		grid-column: 9/13;
+	}
+
+	.header-text div p {
+		margin-bottom: 64px;
 	}
 }
 

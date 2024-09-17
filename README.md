@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/graficdoctor/fe-16-art-gallery-website)
-- Live Site URL: [Deployed On Vercel](https://fe-16-art-gallery-website.vercel.app/)
+- Live Site URL: [Vercel](https://fe-16-art-gallery-website.vercel.app/)
 
 ## My process
 
@@ -49,51 +49,43 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+Solution for the black/white colour of the title: adding a `clip-path` to the `<h1>`:
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.fb-col-wrapper {
+	position: relative;
+}
+
+.header-text h1 {
+	position: relative;
+}
+
+.header-text h1::before {
+	content: 'Modern Art Gallery';
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: hsl(var(--clr-100));
+	z-index: 1;
+	clip-path: polygon(0 0, 54% 0, 54% 100%, 0 100%);
 }
 ```
-
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉');
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
 - [What do you name color variables?](https://css-tricks.com/what-do-you-name-color-variables/) - I like using variables but up until now I wasn't always using the same naming-convention. I looked it up on CSS Tricks and came across a link to [Material Design](https://material.io/design/color/the-color-system.html#color-theme-creation) where the same naming-convention is being used like I was aiming for. Bookmarked the site thus.
-- [Images On The Web](https://www.youtube.com/watch?v=2QYpkrX2N48&t=0s) - xxx.
+- [Images On The Web](https://www.youtube.com/watch?v=2QYpkrX2N48&t=0s)
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Katrien S](https://www.katriens.be)
+- Frontend Mentor - [@katrien-s](https://www.frontendmentor.io/profile/katrien-s)
 
 ## Acknowledgments
 
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
-
-# fe-16-art-gallery-website
