@@ -218,6 +218,12 @@ a {
 	}
 }
 
+@media (min-width: 62.5em) {
+	.fb-col-wrapper {
+		--space-gap: 30px;
+	}
+}
+
 /* Colors */
 
 .bg-100 {
