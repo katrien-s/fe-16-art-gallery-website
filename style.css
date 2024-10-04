@@ -29,7 +29,7 @@
 	--transition: all 0.5s ease;
 }
 
-@media (width >= 43.75em) {
+@media (min-width: 43.75em) {
 	:root {
 		--fs-900: 4.375rem;
 		--fs-800: 4.375rem;
@@ -39,7 +39,7 @@
 	}
 }
 
-@media (width >= 62.5em) {
+@media (min-width: 62.5em) {
 	:root {
 		--fs-900: 6rem;
 		--fs-800: 4.375rem;
@@ -466,7 +466,7 @@ footer img {
 	justify-content: center;
 }
 
-@media (width >= 43.75em) {
+@media (min-width: 43.75em) {
 	.header-image {
 		grid-column: 1/9;
 		grid-row: 1;
@@ -533,7 +533,7 @@ footer img {
 	}
 }
 
-@media (width >= 62.5em) {
+@media (min-width: 62.5em) {
 	.fb-col-wrapper {
 		position: relative;
 	}
@@ -563,6 +563,8 @@ footer img {
 		color: hsl(var(--clr-100));
 		z-index: 1;
 		clip-path: polygon(0 0, 54% 0, 54% 100%, 0 100%);
+		width: 100%;
+		height: 100%;
 	}
 
 	.header-text h1 {
@@ -604,7 +606,7 @@ header.location {
 	padding-bottom: 3.5rem;
 }
 
-@media (width >= 43.75em) {
+@media (min-width: 43.75em) {
 	.location .main-text {
 		padding-block: 5rem;
 	}
@@ -621,7 +623,7 @@ header.location {
 	}
 }
 
-@media (width >= 62.5em) {
+@media (min-width: 62.5em) {
 	.location .main-text {
 		padding-block: 7.5rem;
 	}
